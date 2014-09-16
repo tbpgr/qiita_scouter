@@ -1,5 +1,9 @@
 # QiitaScouter
 
+[![Gem Version](https://badge.fury.io/rb/qiita_scouter.svg)](http://badge.fury.io/rb/qiita_scouter)
+[![Build Status](https://travis-ci.org/tbpgr/qiita_scouter.png?branch=master)](https://travis-ci.org/tbpgr/qiita_scouter)
+[![Coverage Status](https://coveralls.io/repos/tbpgr/qiita_scouter/badge.png)](https://coveralls.io/r/tbpgr/qiita_scouter)
+
 Qiita Scouter  
 
 ## 概要
