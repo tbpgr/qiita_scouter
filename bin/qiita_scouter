@@ -1,0 +1,35 @@
+#!/usr/bin/env ruby
+# encoding: utf-8
+
+require 'qiita_scouter_core'
+require 'qiita_scouter/version'
+require 'thor'
+
+# rubocop:disable LineLength
+module QiitaScouter
+  # = QiitaScouter CLI
+  class CLI < Thor
+    class_option :help, type: :boolean, aliases: '-h', desc: 'help message.'
+    class_option :version, type: :boolean, desc: 'version'
+    default_task :analyze
+
+    desc 'analyze', 'Analyze qiita power_levels'
+    def analyze(user)
+      exit(false) if user.nil?
+      power_levels = QiitaScouter::Core.new.analyze(user)
+      printf("ユーザー名: %s 戦闘力: %s 攻撃力: %s 知力: %s すばやさ: %s\n", user, *power_levels)
+      exit(true)
+    rescue => e
+      warn(e.message)
+      exit(false)
+    end
+
+    desc 'version', 'version'
+    def version
+      p QiitaScouter::VERSION
+    end
+  end
+end
+
+QiitaScouter::CLI.start(ARGV)
+# rubocop:enable LineLength
