@@ -58,14 +58,14 @@ Options:
 または
 
 ~~~bash
-$ qiitam a tbpgr
+$ qiita_scouter a tbpgr
 ユーザー名: tbpgr 戦闘力: 101717 攻撃力: 10780 知力: 87010 すばやさ: 3927
 ~~~
 
 または
 
 ~~~bash
-$ qiitam analyze tbpgr
+$ qiita_scouter analyze tbpgr
 ユーザー名: tbpgr 戦闘力: 101717 攻撃力: 10780 知力: 87010 すばやさ: 3927
 ~~~
 
