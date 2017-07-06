@@ -8,7 +8,7 @@ module QiitaScouter
   # QiitaScouter::QiitaItemsJsonLoader
   class QiitaItemsJsonLoader
     attr_reader :user, :articles
-    QIITA_URL = 'https://qiita.com/api/v1/users/%s/items?page=%s&per_page=%s'
+    QIITA_URL = 'https://qiita.com/api/v2/users/%s/items?page=%s&per_page=%s'
     PER_PAGE = 100
     PAGE_LIMIT = 50
 
