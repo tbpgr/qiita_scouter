@@ -5,7 +5,7 @@ module QiitaScouter
 
     def initialize(options = {})
       @tags = options['tags'].map { |e|e['name'] }
-      @stock_count = options['like_count']||0
+      @stock_count = options['likes_count']
     end
   end
 end
