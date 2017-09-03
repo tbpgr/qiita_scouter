@@ -17,10 +17,10 @@ describe QiitaScouter::Article do
               'versions' => []
             }
           ],
-          'stock_count' => 2
+          'likes_count' => 2
         },
         expected_tags: ['Ruby'],
-        expected_stock_count: 2
+        expected_likes_count: 2
       }
     ]
 
@@ -34,11 +34,11 @@ describe QiitaScouter::Article do
 
           # -- when --
           actual_tags = article.tags
-          actual_stock_count = article.stock_count
+          actual_likes_count = article.likes_count
 
           # -- then --
           expect(actual_tags).to eq(c[:expected_tags])
-          expect(actual_stock_count).to eq(c[:expected_stock_count])
+          expect(actual_likes_count).to eq(c[:expected_likes_count])
         ensure
           case_after c
         end

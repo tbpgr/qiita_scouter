@@ -11,8 +11,8 @@ describe QiitaScouter::User do
         case_title: 'valid case',
         init: {
           'url_name' => 'tbpgr',
-          'followers' => 10,
-          'items' => 20
+          'followers_count' => 10,
+          'items_count' => 20
         },
         expected_url_name: 'tbpgr',
         expected_followers: 10,

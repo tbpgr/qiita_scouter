@@ -25,8 +25,8 @@ describe QiitaScouter::QiitaUserJsonLoader do
         <<-EOS
 {"id":43480,
 "url_name":"tbpgr",
-"followers":14,
-"items":226
+"followers_count":14,
+"items_count":226
 }
         EOS
       end

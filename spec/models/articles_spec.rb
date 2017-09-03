@@ -16,14 +16,14 @@ describe QiitaScouter::Articles do
                                         { 'name' => 'Ruby' },
                                         { 'name' => 'Graphviz' }
                                       ],
-                                      'stock_count' => 25
+                                      'likes_count' => 25
                                     ),
           QiitaScouter::Article.new(
                                       'tags' => [
                                         { 'name' => 'Ruby' },
                                         { 'name' => 'Graphviz' }
                                       ],
-                                      'stock_count' => 25
+                                      'likes_count' => 25
                                     )
         ],
         expected: 2
@@ -37,7 +37,7 @@ describe QiitaScouter::Articles do
                                         { 'name' => 'Ruby' },
                                         { 'name' => 'Graphviz' }
                                       ],
-                                      'stock_count' => 25
+                                      'likes_count' => 25
                                     )
         ],
         expected: 1
@@ -85,14 +85,14 @@ describe QiitaScouter::Articles do
                                         { 'name' => 'Ruby' },
                                         { 'name' => 'Graphviz' }
                                       ],
-                                      'stock_count' => 25
+                                      'likes_count' => 25
                                     ),
           QiitaScouter::Article.new(
                                       'tags' => [
                                         { 'name' => 'PHP' },
                                         { 'name' => 'Graphviz' }
                                       ],
-                                      'stock_count' => 32
+                                      'likes_count' => 32
                                     )
         ]),
         expected: 2
@@ -106,14 +106,14 @@ describe QiitaScouter::Articles do
                                         { 'name' => 'Ruby' },
                                         { 'name' => 'Graphviz' }
                                       ],
-                                      'stock_count' => 25
+                                      'likes_count' => 25
                                     ),
           QiitaScouter::Article.new(
                                       'tags' => [
                                         { 'name' => 'Ruby' },
                                         { 'name' => 'Graphviz' }
                                       ],
-                                      'stock_count' => 25
+                                      'likes_count' => 25
                                     )
         ],
         appends: QiitaScouter::Articles.new([
@@ -122,14 +122,14 @@ describe QiitaScouter::Articles do
                                         { 'name' => 'Ruby' },
                                         { 'name' => 'Graphviz' }
                                       ],
-                                      'stock_count' => 25
+                                      'likes_count' => 25
                                     ),
           QiitaScouter::Article.new(
                                       'tags' => [
                                         { 'name' => 'PHP' },
                                         { 'name' => 'Graphviz' }
                                       ],
-                                      'stock_count' => 32
+                                      'likes_count' => 32
                                     )
         ]),
         expected: 4
@@ -176,14 +176,14 @@ describe QiitaScouter::Articles do
                                         { 'name' => 'Ruby' },
                                         { 'name' => 'Graphviz' }
                                       ],
-                                      'stock_count' => 25
+                                      'likes_count' => 25
                                     ),
           QiitaScouter::Article.new(
                                       'tags' => [
                                         { 'name' => 'Ruby' },
                                         { 'name' => 'Graphviz' }
                                       ],
-                                      'stock_count' => 25
+                                      'likes_count' => 25
                                     )
         ],
         expected: 2
@@ -235,14 +235,14 @@ describe QiitaScouter::Articles do
                                         { 'name' => 'Ruby' },
                                         { 'name' => 'Graphviz' }
                                       ],
-                                      'stock_count' => 1
+                                      'likes_count' => 1
                                     ),
           QiitaScouter::Article.new(
                                       'tags' => [
                                         { 'name' => 'Ruby' },
                                         { 'name' => 'Graphviz' }
                                       ],
-                                      'stock_count' => 2
+                                      'likes_count' => 2
                                     )
         ],
         expected: 3
@@ -259,7 +259,7 @@ describe QiitaScouter::Articles do
 
           # -- when --
           total = 0
-          qiita_scouter_articles.each { |e|total += e.stock_count }
+          qiita_scouter_articles.each { |e|total += e.likes_count }
 
           # -- then --
           expect(total).to eq(c[:expected])
