@@ -11,26 +11,26 @@ module QiitaScouter
       @followers = user.followers
       @items = user.items
       @tags = articles.reduce([]) { |a, e|a += e.tags; a }.uniq.size
-      stock_count = articles.map(&:stock_count).reduce(&:+)
-      @stock_rate = stock_count / 10
+      likes_count = articles.map(&:likes_count).reduce(&:+)
+      @likes_rate = likes_count / 10
     end
 
     # 攻撃力を計算
-    # フォロワー数 × 10 × (ストック数/10)
+    # フォロワー数 × 10 × (いいね数/10)
     def calc_strength
-      @followers * 10 * @stock_rate
+      @followers * 10 * @likes_rate
     end
 
     # 知力を計算
-    # 記事数 × 5 × (ストック数/10)
+    # 記事数 × 5 × (いいね数/10)
     def calc_intelligence
-      @items * 5 * @stock_rate
+      @items * 5 * @likes_rate
     end
 
     # すばやさを計算
-    # Tag数 × (ストック数/10)
+    # Tag数 × (いいね数/10)
     def calc_quickness
-      @tags * @stock_rate
+      @tags * @likes_rate
     end
 
     # 戦闘力を計算
