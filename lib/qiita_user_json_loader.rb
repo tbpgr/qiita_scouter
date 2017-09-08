@@ -7,7 +7,7 @@ module QiitaScouter
   # QiitaScouter::QiitaUserJsonLoader
   class QiitaUserJsonLoader
     attr_reader :target_user, :user
-    QIITA_URL = 'https://qiita.com/api/v1/users/%s'
+    QIITA_URL = 'https://qiita.com/api/v2/users/%s'
 
     def load(target_user)
       @target_user = target_user

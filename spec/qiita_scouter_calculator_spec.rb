@@ -9,8 +9,8 @@ require 'models/articles'
 describe QiitaScouter::Calculator do
   user = QiitaScouter::User.new(
                                   'url_name' => 'tbpgr',
-                                  'followers' => 10,
-                                  'items' => 20
+                                  'followers_count' => 10,
+                                  'items_count' => 20
                                 )
   articles = QiitaScouter::Articles.new([
     QiitaScouter::Article.new(
@@ -18,14 +18,14 @@ describe QiitaScouter::Calculator do
                                   { 'name' => 'Ruby' },
                                   { 'name' => 'Graphviz' }
                                 ],
-                                'stock_count' => 25
+                                'likes_count' => 25
                               ),
     QiitaScouter::Article.new(
                                 'tags' => [
                                   { 'name' => 'PHP' },
                                   { 'name' => 'Graphviz' }
                                 ],
-                                'stock_count' => 32
+                                'likes_count' => 32
                               )
   ])
 
